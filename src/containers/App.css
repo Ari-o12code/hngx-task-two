@@ -1,0 +1,356 @@
+
+*{
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: auto 0;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .container{
+    /* max-width: 95vw; */
+  }
+
+  .poster-card{
+    display: grid;
+    max-width: 100%;
+    height: 60vh;
+    padding: 2em 5em;
+    margin-bottom: 2em;
+  }
+
+  .search{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 1em;
+  }
+
+  .search input{
+    display: flex;
+    background-color: transparent;
+    color: white;
+    width: 525px;
+    padding: 6px 10px;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 6px;
+    border: 2px solid var(--gray-300, #D1D5DB);
+  }
+
+  .search input:focus{
+    outline: none;
+  }
+
+  .search input:hover{
+    border: 2px solid var(--gray-300, #D1D5DB)
+  }
+
+  .search button{
+    background-color: transparent;
+    color: white;
+    margin-left: -4em;
+    border: none;
+  }
+
+  .search-area{
+    display: flex;
+    justify-content: space-between;
+    
+  }
+
+  .movie-box-logo{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1em;
+  }
+
+  .movie-box-logo h2{
+    color: white;
+    margin-top: 0;
+  }
+
+  .movie-box-logo img{
+    width: 30px;
+    height: 30px;
+  }
+
+  .sign-in{
+    display: inline-flex;
+    /* align-items: center; */
+    gap: 1em;
+  }
+
+  .sign-in p{
+    color: white;
+    margin-top: 0;
+  }
+
+  .sign-in img{
+    background-color: #BE123C;
+    border-radius: 50%;
+    padding: 4px;
+    width: 24px;
+    height: 24px;
+  }
+
+  .poster-text{
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 300px;
+    text-align: left;
+    color: white;
+  }
+
+  .poster-text h1{
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .poster-text p{
+    font-size: 10px;
+  }
+
+  .trailer{
+    background-color: #BE123C;
+    border-radius: 6px;
+    padding: 4px 10px;
+  }
+
+  .movies-container{
+    padding: 1.5em 2.5em;
+  }
+
+  .movies-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    place-items: center;
+    margin-top: 2em;
+  }
+
+  .movies-container h1{
+    margin-top: 0;
+  }
+
+  .movie-card{
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    position: relative;
+    width: 220px;
+    border: 1px solid #ccc;
+    padding: 16px;
+    margin: 16px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+  }
+
+  .movie-card:hover{
+    transform: scale(1.05);
+  }
+
+  .movie-card .movie-link{
+    text-decoration: none;
+  }
+
+  .movie-card .movie-link img{
+    margin-bottom: 0.5em;
+  }
+
+  .heart-icon{
+    position: absolute;
+    background-color: #9CA3AF;
+    border-radius: 50%;
+    padding: 4px;
+    width: 30px;
+    height: 30px;
+    top: 30px;
+    right: 30px;
+  }
+
+  .movie-release-date{
+    color: var(--gray-400, #9CA3AF);
+    font-size: 12px;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  .movie-title{
+    margin-top: 0.5em;
+    color: var(--gray-900, #111827);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: normal;
+  }
+  
+  .loader-circle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .movie-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .side-bar{
+    grid-column: span 1;
+    grid-row: span 2;
+    border-right: 1px solid #666;
+    border-radius: 50px;
+    margin-right: 2em;
+    padding-bottom: 1em;
+  }
+
+
+  .flex{
+    display: flex;
+    align-items: center;
+    color: #666;
+    gap: 0.5em;
+    padding: 1.3em 0.8em;
+  }
+
+  .logout{
+    padding: 1.5em;
+  }
+
+  .flex img{
+    width: 22px;
+    height: 22px;
+  }
+
+  .movie-box{
+    gap: 0.5em;
+    font-size: x-large;
+    color: #111827;
+  }
+
+  .movie-box img{
+    width: 30px;
+    height: 30px;
+  }
+  
+  .rectangle{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin-top: 3em;
+    margin-left: 1.5em;
+    flex-shrink: 0;
+    font-size: 12px;
+    border: 1px solid rgba(190, 18, 60, 0.70);
+    border-radius: 20px;
+    background-color: #f8d4da;
+    padding: 2em 1em;
+    padding-top: 3em;
+  }
+
+  .movie{
+    background-color: #f8d4da;
+    border-right: 3px solid rgba(190, 18, 60, 0.70);
+  }
+
+  .play-btn{
+    align-self: center;
+    justify-self: center;
+    color: #BE123C;
+    background-color: #f99ba9;
+    border: 1px solid rgba(190, 18, 60, 0.70);
+    border-radius: 4px;
+    margin-top: 1em;
+    padding: 4px 10px;
+  }
+
+  .movie-img{
+    background-position: center;
+    grid-row: 1 / 1;
+    grid-column: 2 / 4;
+    place-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1.5em;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-radius: 20px;
+    width: 1000px;
+    height: 400px;
+  }
+
+  .movie-img img{
+    background-color: rgba(255, 255, 255, 0.35);
+    border-radius: 50%;
+    padding: 6px;
+  }
+
+  .movie-details-container{
+    grid-column: 2 / 3;
+  }
+
+  .movie-details{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    font-weight: bold;
+    margin-bottom: 0;
+  }
+
+  .dot {
+    width: 4px;
+    height: 4px;
+    background-color: #000; 
+    border-radius: 50%;
+    margin: 0; 
+    padding: 0;
+  }  
+
+  .movie-overview{
+    font-size: 15px;
+    margin-top: 0;
+    width: 500px;
+  }
+
+  .watch-options{
+    grid-column: 3 / 4;
+    grid-row: 2 / 2;
+    text-align: center;
+    place-self: center;
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  .show-btn{
+    border-radius: 10px;
+    padding: 0.5em;
+    border: 1px solid #BE123C;
+  }
+
+  .show{
+    color: #fff;
+    background: #BE123C;
+  }
+
+  .rated{
+    align-self: start;
+    justify-self: start;
+  }
+
+  .rated-movie{
+    padding: 0.5em 2em;
+  }
+
+  .award{
+    color: #000;
+    padding: 0.5em 2em;
+  }
