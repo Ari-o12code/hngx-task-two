@@ -59,7 +59,7 @@ const MovieDetails = () => {
                 <p>MovieBox</p>
                 </div>
 
-                <div className='flex'>
+                <div  className='flex'>
                 <img src={home} alt="home icon" />
                 <p>Home</p>
                 </div>
@@ -101,32 +101,30 @@ const MovieDetails = () => {
         <div className='movie-img' style={style}>
                 <img src={play} alt="" />
         </div> 
-
-        <div className='movie-details-container'>
-            <div className='movie-details'>
-              <p data-testid = 'movie-title'>{movie.title}</p>
-              <div className="dot"></div>
-              <p data-testid = 'movie-release-date'>{movie.release_date}</p>
-              <div className="dot"></div>
-              <p data-testid = 'movie-runtime'>{movie.runtime}</p>
-            </div>
-            <p className='movie-overview' data-testid = 'movie-overview'>{movie.overview}</p>
-            <div>
-              <p>Directors:</p>
-              <p>Writers:</p>
-              <p>Stars:</p>
-              <div className='flex rated'>
-                <p className='show-btn show rated-movie'>Top rated Movie</p>
-                <p className='show-btn award'>Award 9 nominee</p>
+          <div className='movie-details-container'>
+              <div className='movie-details'>
+                <p data-testid = 'movie-title'>{movie.title}</p>
+                <div className="dot"></div>
+                <p data-testid = 'movie-release-date'>{movie.release_date}</p>
+                <div className="dot"></div>
+                <p data-testid = 'movie-runtime'>{movie.runtime}</p>
               </div>
-            </div>
-        </div>
-        <div className='watch-options'>
-          <p className='show-btn show'>See Showtimes</p>
-          <p className='show-btn'>More watch options</p>
-          <img src={rectangle} alt="best movies poster" />
-        </div>
-
+              <p className='movie-overview' data-testid = 'movie-overview'>{movie.overview}</p>
+              <div>
+                <p>Directors:</p>
+                <p>Writers:</p>
+                <p>Stars:</p>
+                <div className='flex rated'>
+                  <p className='show-btn show rated-movie'>Top rated Movie</p>
+                  <p className='show-btn award'>Award 9 nominee</p>
+                </div>
+              </div>
+          </div>
+          <div className='watch-options'>
+            <p className='show-btn show'>See Showtimes</p>
+            <p className='show-btn'>More watch options</p>
+            <img src={rectangle} alt="best movies poster" />
+          </div>
     </div>
   );
 };

@@ -11,7 +11,9 @@ const PosterCard = () => {
                 <img src={tv} alt="tv icon" />
                 <h2>Moviebox</h2>
             </div>
+            <div className="search">
             <SearchBar />
+            </div>
             <div className="sign-in">
                 <p> <strong>Sign in</strong></p>
                 <img src={menu} alt="menu icon" className="menu-icon"/>
