@@ -1,11 +1,14 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+import MoviesContext from "../context/movies"
 import { BiSearch } from "react-icons/bi";
 
 const SearchBar = () => {
+  const {fetchSearchMovies} = useContext(MoviesContext)
   const [term, setTerm] = useState('')
 
   const handleSubmit = (event) => {
     event.preventDefault()
+    fetchSearchMovies(term)
     setTerm('')
   }
 
