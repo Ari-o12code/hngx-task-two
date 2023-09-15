@@ -8,7 +8,7 @@ const SearchBar = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault()
-    fetchSearchMovies(term)
+    term && fetchSearchMovies(term)
     setTerm('')
   }
 
